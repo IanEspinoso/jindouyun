@@ -1,0 +1,24 @@
+=== Model Validation Comparison ===
+       model  val_auc   val_ap  val_precision@0.5  val_recall@0.5  val_f1@0.5
+      LogReg 0.571631 0.181372           0.140893        0.525641    0.222222
+RandomForest 0.544359 0.139494           0.132075        0.089744    0.106870
+    LightGBM 0.494639 0.136202           0.120370        0.166667    0.139785
+
+=== Winner (by AUC then AP) ===
+LogReg
+
+=== Test Metrics (Winner) ===
+AUC: 0.491
+AP: 0.126
+Precision@0.5: 0.121
+Recall@0.5: 0.474
+F1@0.5: 0.193
+
+              precision    recall  f1-score   support
+
+           0      0.877     0.521     0.654       562
+           1      0.121     0.474     0.193        78
+
+    accuracy                          0.516       640
+   macro avg      0.499     0.498     0.423       640
+weighted avg      0.785     0.516     0.598       640
